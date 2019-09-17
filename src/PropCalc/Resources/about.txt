@@ -1,0 +1,34 @@
+addfont; Arial;9;Bold;Group;
+addfont; Microsoft Sans Serif;8;;Names;
+addfont; Arial;14;Bold;Slogan;
+
+~Строки
+
+scene;20 ~сцена 1
+
+addstring;Калькулятор пропорций;Group
+addstring;v 0.0.1;Group
+addstring;Распространяется бесплатно;Names
+addstring;                      ;Names
+addstring;Сделал;Group
+addstring;Саня Егоров;Names
+addstring;                      ;Names
+addstring;Под чутким руководством;Group
+addstring;PunkArr[];Names
+addstring;Leha Silent;Names
+addstring;Chaos. Cry. Destruction.;Group
+addstring;Саня Егоров;Names
+addstring;Художественное пинание по пятой точке;Group
+addstring;Leha Silent;Names
+addstring;PunkArr[];Names
+
+scene;20;3000; ~сцена 2
+
+addstring;Об ошибках и предложениях;Names
+addstring;пишите на сайты:;Names
+addstring;http://lj.rossia.org/users/hex_laden;Names;87 CE EB;
+addstring;http://tolik-punkoff.com;Names;87 CE EB;
+
+scene;20;1000; ~сцена со слоганом
+
+addstring;Make code, not war! C# like you.;Slogan;FF FF 00;
