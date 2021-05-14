@@ -37,7 +37,6 @@ namespace Wildsoft.About
             Drawer = new AboutDrawer(pctMessages);
             Drawer.DefaultBackColor = Color.Black;
             Drawer.DefaultTextColor = Color.Lime;
-            Drawer.SceneChanged += new AboutDrawer.OnSceneChanged(Drawer_SceneChanged);
 
             if (!Drawer.LoadScript(PropCalc.Properties.Resources.about))
             {
@@ -52,20 +51,7 @@ namespace Wildsoft.About
                     MessageBoxIcon.Exclamation);
                 return;
             }
-        }
-
-        void Drawer_SceneChanged(object sender, SceneChangedEventArgs e)
-        {
-            this.BackColor = Color.FromArgb(255, e.BackColor);
-            if (e.SceneNumber == 2)
-            {
-                this.ForeColor = Color.Yellow;
-            }
-            else
-            {
-                this.ForeColor=Color.Green;
-            }
-        }
+        }        
                 
         private void pctLogo_Click(object sender, EventArgs e)
         {

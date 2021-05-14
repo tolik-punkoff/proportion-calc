@@ -105,6 +105,26 @@ namespace PropCalc
 
             return Ans;
         }
+
+        public static string CalcPayWithCommission(string sPayment, string sComission, bool Okr)
+        {
+            double? P = ToDouble(sPayment);
+            double? C = ToDouble(sComission);
+
+            if (C >= 100)
+            {
+                return "Комиссия >= 100 процентов, беги оттуда!";
+            }
+
+            double Res = (double)(P / (1 - C / 100));
+
+            if (Okr)
+            {
+                Res = Math.Ceiling(Res);
+            }
+
+            return Convert.ToString(Res).Replace(',', '.');
+        }
         
     }
 }

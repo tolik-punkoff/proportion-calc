@@ -2,9 +2,10 @@
 
 ; Define your application name
 !define APPNAME "Proportion Calc"
-!define APPNAMEANDVERSION "Proportion Calc 0.1"
+!define APPNAMEANDVERSION "Proportion Calc 0.2"
 
 ; Main Install settings
+Unicode true
 Name "${APPNAMEANDVERSION}"
 InstallDir "$PROGRAMFILES\PropCalc"
 InstallDirRegKey HKLM "Software\${APPNAME}" ""

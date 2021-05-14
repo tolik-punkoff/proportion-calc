@@ -45,14 +45,17 @@
             this.pbDrawFormula = new System.Windows.Forms.PictureBox();
             this.pbFormula = new System.Windows.Forms.PictureBox();
             this.pbScheme = new System.Windows.Forms.PictureBox();
+            this.mnuMain = new System.Windows.Forms.MenuStrip();
+            this.mnuPaymentWithComission = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbDrawFormula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFormula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).BeginInit();
+            this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtA
             // 
-            this.txtA.Location = new System.Drawing.Point(2, 12);
+            this.txtA.Location = new System.Drawing.Point(2, 29);
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(184, 20);
             this.txtA.TabIndex = 0;
@@ -62,7 +65,7 @@
             // chkXA
             // 
             this.chkXA.AutoSize = true;
-            this.chkXA.Location = new System.Drawing.Point(193, 14);
+            this.chkXA.Location = new System.Drawing.Point(193, 31);
             this.chkXA.Name = "chkXA";
             this.chkXA.Size = new System.Drawing.Size(33, 17);
             this.chkXA.TabIndex = 1;
@@ -73,7 +76,7 @@
             // chkXB
             // 
             this.chkXB.AutoSize = true;
-            this.chkXB.Location = new System.Drawing.Point(423, 14);
+            this.chkXB.Location = new System.Drawing.Point(423, 31);
             this.chkXB.Name = "chkXB";
             this.chkXB.Size = new System.Drawing.Size(33, 17);
             this.chkXB.TabIndex = 3;
@@ -83,7 +86,7 @@
             // 
             // txtB
             // 
-            this.txtB.Location = new System.Drawing.Point(232, 12);
+            this.txtB.Location = new System.Drawing.Point(232, 29);
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(184, 20);
             this.txtB.TabIndex = 2;
@@ -93,7 +96,7 @@
             // chkXD
             // 
             this.chkXD.AutoSize = true;
-            this.chkXD.Location = new System.Drawing.Point(423, 40);
+            this.chkXD.Location = new System.Drawing.Point(423, 57);
             this.chkXD.Name = "chkXD";
             this.chkXD.Size = new System.Drawing.Size(33, 17);
             this.chkXD.TabIndex = 7;
@@ -103,7 +106,7 @@
             // 
             // txtD
             // 
-            this.txtD.Location = new System.Drawing.Point(232, 38);
+            this.txtD.Location = new System.Drawing.Point(232, 55);
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(184, 20);
             this.txtD.TabIndex = 6;
@@ -113,7 +116,7 @@
             // chkXC
             // 
             this.chkXC.AutoSize = true;
-            this.chkXC.Location = new System.Drawing.Point(193, 40);
+            this.chkXC.Location = new System.Drawing.Point(193, 57);
             this.chkXC.Name = "chkXC";
             this.chkXC.Size = new System.Drawing.Size(33, 17);
             this.chkXC.TabIndex = 5;
@@ -123,7 +126,7 @@
             // 
             // txtC
             // 
-            this.txtC.Location = new System.Drawing.Point(2, 38);
+            this.txtC.Location = new System.Drawing.Point(2, 55);
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(184, 20);
             this.txtC.TabIndex = 4;
@@ -132,7 +135,7 @@
             // 
             // btnShowHide
             // 
-            this.btnShowHide.Location = new System.Drawing.Point(2, 63);
+            this.btnShowHide.Location = new System.Drawing.Point(2, 80);
             this.btnShowHide.Name = "btnShowHide";
             this.btnShowHide.Size = new System.Drawing.Size(107, 23);
             this.btnShowHide.TabIndex = 8;
@@ -144,7 +147,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(186, 150);
+            this.label1.Location = new System.Drawing.Point(186, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 11;
@@ -154,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(419, 150);
+            this.label2.Location = new System.Drawing.Point(419, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 24);
             this.label2.TabIndex = 13;
@@ -163,7 +166,7 @@
             // chkCopy
             // 
             this.chkCopy.AutoSize = true;
-            this.chkCopy.Location = new System.Drawing.Point(116, 66);
+            this.chkCopy.Location = new System.Drawing.Point(116, 83);
             this.chkCopy.Name = "chkCopy";
             this.chkCopy.Size = new System.Drawing.Size(140, 17);
             this.chkCopy.TabIndex = 14;
@@ -173,7 +176,7 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(349, 64);
+            this.btnAbout.Location = new System.Drawing.Point(349, 81);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(107, 23);
             this.btnAbout.TabIndex = 15;
@@ -185,7 +188,7 @@
             // 
             this.pbDrawFormula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbDrawFormula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbDrawFormula.Location = new System.Drawing.Point(2, 235);
+            this.pbDrawFormula.Location = new System.Drawing.Point(2, 252);
             this.pbDrawFormula.Name = "pbDrawFormula";
             this.pbDrawFormula.Size = new System.Drawing.Size(454, 133);
             this.pbDrawFormula.TabIndex = 12;
@@ -194,7 +197,7 @@
             // pbFormula
             // 
             this.pbFormula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbFormula.Location = new System.Drawing.Point(232, 92);
+            this.pbFormula.Location = new System.Drawing.Point(232, 109);
             this.pbFormula.Name = "pbFormula";
             this.pbFormula.Size = new System.Drawing.Size(184, 133);
             this.pbFormula.TabIndex = 10;
@@ -203,17 +206,34 @@
             // pbScheme
             // 
             this.pbScheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbScheme.Location = new System.Drawing.Point(2, 92);
+            this.pbScheme.Location = new System.Drawing.Point(2, 109);
             this.pbScheme.Name = "pbScheme";
             this.pbScheme.Size = new System.Drawing.Size(184, 133);
             this.pbScheme.TabIndex = 9;
             this.pbScheme.TabStop = false;
             // 
+            // mnuMain
+            // 
+            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPaymentWithComission});
+            this.mnuMain.Location = new System.Drawing.Point(0, 0);
+            this.mnuMain.Name = "mnuMain";
+            this.mnuMain.Size = new System.Drawing.Size(464, 24);
+            this.mnuMain.TabIndex = 16;
+            this.mnuMain.Text = "menuStrip1";
+            // 
+            // mnuPaymentWithComission
+            // 
+            this.mnuPaymentWithComission.Name = "mnuPaymentWithComission";
+            this.mnuPaymentWithComission.Size = new System.Drawing.Size(164, 20);
+            this.mnuPaymentWithComission.Text = "Расчет платежа с комиссией";
+            this.mnuPaymentWithComission.Click += new System.EventHandler(this.mnuPaymentWithComission_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 372);
+            this.ClientSize = new System.Drawing.Size(464, 388);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.chkCopy);
             this.Controls.Add(this.label2);
@@ -230,6 +250,7 @@
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.chkXA);
             this.Controls.Add(this.txtA);
+            this.Controls.Add(this.mnuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -240,6 +261,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDrawFormula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFormula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).EndInit();
+            this.mnuMain.ResumeLayout(false);
+            this.mnuMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +286,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkCopy;
         private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.MenuStrip mnuMain;
+        private System.Windows.Forms.ToolStripMenuItem mnuPaymentWithComission;
     }
 }
 

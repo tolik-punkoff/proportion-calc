@@ -185,7 +185,7 @@ namespace PropCalc
         private void ShowScheme()
         {
             this.Width = 470;
-            this.Height = 398;
+            this.Height = 410;
             VisibleScheme = true;
             btnShowHide.Text = "Скрыть схему";
         }
@@ -193,7 +193,7 @@ namespace PropCalc
         private void HideScheme()
         {
             this.Width = 470;
-            this.Height = 115;
+            this.Height = 130;
             VisibleScheme = false;
             btnShowHide.Text = "Показать схему";
         }
@@ -242,6 +242,14 @@ namespace PropCalc
             frmAbout fAbout = new frmAbout();
             fAbout.ShowDialog();
         }
+
+        private void mnuPaymentWithComission_Click(object sender, EventArgs e)
+        {
+            frmComission fComission = new frmComission();
+            fComission.ShowDialog();
+        }
+
+        
         
     }
 }
