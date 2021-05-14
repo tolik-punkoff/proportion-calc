@@ -22,6 +22,6 @@ Added calculating payment with comission.
 
 ![04](/screens/s04.png)
 
-![05](/screens/s05.png)
-
 ![06](/screens/s06.png)
+
+![05](/screens/s05.png)
