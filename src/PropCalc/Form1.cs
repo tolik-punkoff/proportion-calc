@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Wildsoft.About;
+using Wildsoft.Controls;
 
 namespace PropCalc
 {
@@ -30,31 +31,7 @@ namespace PropCalc
             DrawFormula.InitGraph();
 
             HideScheme();
-        }
-        
-        private void txt_KeyPress(object sender, KeyPressEventArgs e)
-        {            
-            //ввод только цифр с одной точкой (запятой)
-            if ((e.KeyChar == '.') || (e.KeyChar == ','))
-            {
-                TextBox txt = (TextBox)sender;
-                if (txt.Text.Contains(".") || txt.Text.Contains(","))
-                {
-                    e.Handled = true;
-                    return;
-                }
-                return;
-            }
-
-            if (!(Char.IsDigit(e.KeyChar)))
-            {
-                if ((e.KeyChar != (char)Keys.Back))
-                {
-                    e.Handled = true;
-                    return;
-                }
-            }
-        }
+        }                
 
         private void chkX_CheckedChanged(object sender, EventArgs e)
         {
@@ -68,7 +45,7 @@ namespace PropCalc
             {
                 case "A":
                     {
-                        DisableTextBox(txtA);                        
+                        DisableInputDigitControl(idcA);                        
                         A = null;
 
                         B = string.Empty;
@@ -80,7 +57,7 @@ namespace PropCalc
                     }; break;
                 case "B":
                     {
-                        DisableTextBox(txtB);                        
+                        DisableInputDigitControl(idcB);                        
                         B = null;
 
                         A = string.Empty;
@@ -92,7 +69,7 @@ namespace PropCalc
                     }; break;
                 case "C":
                     {
-                        DisableTextBox(txtC);
+                        DisableInputDigitControl(idcC);
                         C = null;
 
                         B = string.Empty;
@@ -104,7 +81,7 @@ namespace PropCalc
                     }; break;
                 case "D":
                     {
-                        DisableTextBox(txtD);
+                        DisableInputDigitControl(idcD);
                         D = null;
                         
                         B = string.Empty;
@@ -117,20 +94,20 @@ namespace PropCalc
             }            
         }
 
-        private void DisableTextBox(TextBox TextBoxCtrl)
+        private void DisableInputDigitControl(InputDigitControl idcCtrl)
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is InputDigitControl)
                 {
-                    TextBox tb = (TextBox)ctrl;
-                    if (tb.Name == TextBoxCtrl.Name)
+                    InputDigitControl idc = (InputDigitControl)ctrl;
+                    if (idc.Name == idcCtrl.Name)
                     {
-                        tb.ReadOnly = true;
+                        idc.ReadOnly = true;
                     }
                     else
                     {
-                        tb.ReadOnly = false;
+                        idc.ReadOnly = false;
                     }
                 }
             }
@@ -155,23 +132,23 @@ namespace PropCalc
         {            
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is InputDigitControl)
                 {
-                    TextBox tb = (TextBox)ctrl;
-                    if (tb.ReadOnly)
+                    InputDigitControl idc = (InputDigitControl)ctrl;
+                    if (idc.ReadOnly)
                     {
-                        tb.Text = Answer;
+                        idc.Text = Answer;
                     }                    
                 }
             }
         }
 
-        private void txt_TextChanged(object sender, EventArgs e)
+        private void idc_TextChanged(object sender, EventArgs e)
         {
-            if (A != null) A = txtA.Text;
-            if (B != null) B = txtB.Text;
-            if (C != null) C = txtC.Text;
-            if (D != null) D = txtD.Text;
+            if (A != null) A = idcA.Text;
+            if (B != null) B = idcB.Text;
+            if (C != null) C = idcC.Text;
+            if (D != null) D = idcD.Text;
 
             string Result = calc.PropCalc(A, B, C, D);
             SetAnswer(Result);
@@ -214,15 +191,15 @@ namespace PropCalc
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is InputDigitControl)
                 {
-                    TextBox tb = (TextBox)ctrl;
-                    if (tb.ReadOnly)
+                    InputDigitControl idc = (InputDigitControl)ctrl;
+                    if (idc.ReadOnly)
                     {
-                        if (tb.Text != string.Empty)
+                        if (idc.Text != string.Empty)
                         {
                             Clipboard.Clear();
-                            Clipboard.SetText(tb.Text);
+                            Clipboard.SetText(idc.Text);
                         }
                     }
                 }
@@ -247,9 +224,6 @@ namespace PropCalc
         {
             frmComission fComission = new frmComission();
             fComission.ShowDialog();
-        }
-
-        
-        
+        }                
     }
 }

@@ -2,7 +2,7 @@
 
 ; Define your application name
 !define APPNAME "Proportion Calc"
-!define APPNAMEANDVERSION "Proportion Calc 0.2"
+!define APPNAMEANDVERSION "Proportion Calc 0.0.3"
 
 ; Main Install settings
 Unicode true

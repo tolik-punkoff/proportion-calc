@@ -7,7 +7,7 @@ addfont; Arial;14;Bold;Slogan;
 scene;20 ~сцена 1
 
 addstring;Калькулятор пропорций;Group
-addstring;v 0.0.2;Group
+addstring;v 0.0.3;Group
 addstring;Распространяется бесплатно;Names
 addstring;                      ;Names
 addstring;Сделал;Group

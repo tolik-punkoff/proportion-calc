@@ -1,16 +1,24 @@
 # proportion-calc
 Simple proportion calculator.
 
-## v 0.2
+## v 0.0.2
 
 Added calculating payment with comission.
+
+## v 0.0.3
+
+Small bug fixed.
 
 # Описание на русском
 Простой калькулятор пропорций. Запускается без установки.
 
-## v 0.2
+## v 0.0.2
 
 Добавлена функция вычисления суммы платежа с комиссией.
+
+## v 0.0.3
+
+Усовершенствован ввод чисел. Используется контрол InputDigitControl.
 
 ## Screenshots
 

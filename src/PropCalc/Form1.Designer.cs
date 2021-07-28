@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.txtA = new System.Windows.Forms.TextBox();
             this.chkXA = new System.Windows.Forms.CheckBox();
             this.chkXB = new System.Windows.Forms.CheckBox();
-            this.txtB = new System.Windows.Forms.TextBox();
             this.chkXD = new System.Windows.Forms.CheckBox();
-            this.txtD = new System.Windows.Forms.TextBox();
             this.chkXC = new System.Windows.Forms.CheckBox();
-            this.txtC = new System.Windows.Forms.TextBox();
             this.btnShowHide = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,20 +43,15 @@
             this.pbScheme = new System.Windows.Forms.PictureBox();
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.mnuPaymentWithComission = new System.Windows.Forms.ToolStripMenuItem();
+            this.idcD = new Wildsoft.Controls.InputDigitControl();
+            this.idcC = new Wildsoft.Controls.InputDigitControl();
+            this.idcB = new Wildsoft.Controls.InputDigitControl();
+            this.idcA = new Wildsoft.Controls.InputDigitControl();
             ((System.ComponentModel.ISupportInitialize)(this.pbDrawFormula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFormula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).BeginInit();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtA
-            // 
-            this.txtA.Location = new System.Drawing.Point(2, 29);
-            this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(184, 20);
-            this.txtA.TabIndex = 0;
-            this.txtA.TextChanged += new System.EventHandler(this.txt_TextChanged);
-            this.txtA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
             // 
             // chkXA
             // 
@@ -84,15 +75,6 @@
             this.chkXB.UseVisualStyleBackColor = true;
             this.chkXB.CheckedChanged += new System.EventHandler(this.chkX_CheckedChanged);
             // 
-            // txtB
-            // 
-            this.txtB.Location = new System.Drawing.Point(232, 29);
-            this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(184, 20);
-            this.txtB.TabIndex = 2;
-            this.txtB.TextChanged += new System.EventHandler(this.txt_TextChanged);
-            this.txtB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
-            // 
             // chkXD
             // 
             this.chkXD.AutoSize = true;
@@ -104,15 +86,6 @@
             this.chkXD.UseVisualStyleBackColor = true;
             this.chkXD.CheckedChanged += new System.EventHandler(this.chkX_CheckedChanged);
             // 
-            // txtD
-            // 
-            this.txtD.Location = new System.Drawing.Point(232, 55);
-            this.txtD.Name = "txtD";
-            this.txtD.Size = new System.Drawing.Size(184, 20);
-            this.txtD.TabIndex = 6;
-            this.txtD.TextChanged += new System.EventHandler(this.txt_TextChanged);
-            this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
-            // 
             // chkXC
             // 
             this.chkXC.AutoSize = true;
@@ -123,15 +96,6 @@
             this.chkXC.Text = "X";
             this.chkXC.UseVisualStyleBackColor = true;
             this.chkXC.CheckedChanged += new System.EventHandler(this.chkX_CheckedChanged);
-            // 
-            // txtC
-            // 
-            this.txtC.Location = new System.Drawing.Point(2, 55);
-            this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(184, 20);
-            this.txtC.TabIndex = 4;
-            this.txtC.TextChanged += new System.EventHandler(this.txt_TextChanged);
-            this.txtC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
             // 
             // btnShowHide
             // 
@@ -229,11 +193,51 @@
             this.mnuPaymentWithComission.Text = "Расчет платежа с комиссией";
             this.mnuPaymentWithComission.Click += new System.EventHandler(this.mnuPaymentWithComission_Click);
             // 
+            // idcD
+            // 
+            this.idcD.Fractional = true;
+            this.idcD.Location = new System.Drawing.Point(232, 57);
+            this.idcD.Name = "idcD";
+            this.idcD.Size = new System.Drawing.Size(184, 20);
+            this.idcD.TabIndex = 6;
+            this.idcD.TextChanged += new System.EventHandler(this.idc_TextChanged);
+            // 
+            // idcC
+            // 
+            this.idcC.Fractional = true;
+            this.idcC.Location = new System.Drawing.Point(2, 54);
+            this.idcC.Name = "idcC";
+            this.idcC.Size = new System.Drawing.Size(184, 20);
+            this.idcC.TabIndex = 4;
+            this.idcC.TextChanged += new System.EventHandler(this.idc_TextChanged);
+            // 
+            // idcB
+            // 
+            this.idcB.Fractional = true;
+            this.idcB.Location = new System.Drawing.Point(232, 31);
+            this.idcB.Name = "idcB";
+            this.idcB.Size = new System.Drawing.Size(184, 20);
+            this.idcB.TabIndex = 2;
+            this.idcB.TextChanged += new System.EventHandler(this.idc_TextChanged);
+            // 
+            // idcA
+            // 
+            this.idcA.Fractional = true;
+            this.idcA.Location = new System.Drawing.Point(2, 29);
+            this.idcA.Name = "idcA";
+            this.idcA.Size = new System.Drawing.Size(184, 20);
+            this.idcA.TabIndex = 0;
+            this.idcA.TextChanged += new System.EventHandler(this.idc_TextChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 388);
+            this.Controls.Add(this.idcD);
+            this.Controls.Add(this.idcC);
+            this.Controls.Add(this.idcB);
+            this.Controls.Add(this.idcA);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.chkCopy);
             this.Controls.Add(this.label2);
@@ -243,13 +247,9 @@
             this.Controls.Add(this.pbScheme);
             this.Controls.Add(this.btnShowHide);
             this.Controls.Add(this.chkXD);
-            this.Controls.Add(this.txtD);
             this.Controls.Add(this.chkXC);
-            this.Controls.Add(this.txtC);
             this.Controls.Add(this.chkXB);
-            this.Controls.Add(this.txtB);
             this.Controls.Add(this.chkXA);
-            this.Controls.Add(this.txtA);
             this.Controls.Add(this.mnuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -270,14 +270,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtA;
         private System.Windows.Forms.CheckBox chkXA;
         private System.Windows.Forms.CheckBox chkXB;
-        private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.CheckBox chkXD;
-        private System.Windows.Forms.TextBox txtD;
         private System.Windows.Forms.CheckBox chkXC;
-        private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.Button btnShowHide;
         private System.Windows.Forms.PictureBox pbScheme;
         private System.Windows.Forms.PictureBox pbFormula;
@@ -288,6 +284,10 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.MenuStrip mnuMain;
         private System.Windows.Forms.ToolStripMenuItem mnuPaymentWithComission;
+        private Wildsoft.Controls.InputDigitControl idcA;
+        private Wildsoft.Controls.InputDigitControl idcB;
+        private Wildsoft.Controls.InputDigitControl idcC;
+        private Wildsoft.Controls.InputDigitControl idcD;
     }
 }
 

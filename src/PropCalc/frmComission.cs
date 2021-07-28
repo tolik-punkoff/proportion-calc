@@ -21,47 +21,23 @@ namespace PropCalc
         
         private void frmComission_Load(object sender, EventArgs e)
         {
-            txtComission.Text = "0";
-            txtPayment.Text = "0";
+            idcComission.Text = "0";
+            idcPayment.Text = "0";
         }
 
         private void Calc()
         {
             bOkr = chkOkr.Checked;
-            sPayment = txtPayment.Text;
-            sComission = txtComission.Text;
+            sPayment = idcPayment.Text;
+            sComission = idcComission.Text;
 
             txtResult.Text = 
                 calc.CalcPayWithCommission(sPayment, sComission, bOkr);            
         }
 
-        private void txt_TextChanged(object sender, EventArgs e)
+        private void idc_TextChanged(object sender, EventArgs e)
         {
             Calc();
-        }
-
-        private void txt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //ввод только цифр с одной точкой (запятой)
-            if ((e.KeyChar == '.') || (e.KeyChar == ','))
-            {
-                TextBox txt = (TextBox)sender;
-                if (txt.Text.Contains(".") || txt.Text.Contains(","))
-                {
-                    e.Handled = true;
-                    return;
-                }
-                return;
-            }
-
-            if (!(Char.IsDigit(e.KeyChar)))
-            {
-                if ((e.KeyChar != (char)Keys.Back))
-                {
-                    e.Handled = true;
-                    return;
-                }
-            }
         }
 
         private void chkOkr_CheckedChanged(object sender, EventArgs e)
